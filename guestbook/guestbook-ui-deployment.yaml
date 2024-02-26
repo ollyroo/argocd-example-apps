@@ -5,6 +5,10 @@ metadata:
 spec:
   replicas: 50
   revisionHistoryLimit: 3
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
   selector:
     matchLabels:
       app: guestbook-ui
